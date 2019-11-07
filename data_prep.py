@@ -30,13 +30,15 @@ def process_selected_images(n,p):
     channels = 3
     x = [] #list to store image data
     y = [] #list to store corresponding class
-     #for the same selection every time
+    
     num_cancer = int(n*p)
     num_healthy = int(n*(1-p))
     print(num_cancer, num_healthy)
     #num_cancer + num_healthy = n
+     #for the same selection every time
     np.random.seed(0)
     randomly_selected_cancer_images = list(np.random.choice(classOne, num_cancer))
+     #for the same selection every time
     np.random.seed(0)
     randomly_selected_healthy_images = list(np.random.choice(classZero, num_healthy))
     # random_images = np.random.choice(imagePatches, n, replace=False)#without replacement.
