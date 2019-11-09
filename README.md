@@ -9,3 +9,5 @@ save_samples.py : this script will create the samples of both training images (t
 
 visualize.py just reads in a random image from the directory and lets you view it.
 
+DOWNLOAD DATA
+https://www.kaggle.com/paultimothymooney/breast-histopathology-images
