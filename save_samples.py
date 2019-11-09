@@ -26,11 +26,11 @@ The problem here is that the directory appears in the string... maybe we should 
 
 '''
 
-sample_sizes = [5000, 10000, 15000, 20000] #linearly incrasing so we can LINEARLY examine marginal effects
+sample_sizes = [5000, 10000, 15000, 20000] #linearly increasing so that we can LINEARLY examine marginal effects
 proportions = [0.01, 0.05, 0.10, 0.15] #approximately linear
 
 def get_test_set_size(training_set_size):
-    return int(training_set_size/0.8)-training_set_size
+    return int(training_set_size/0.9)-training_set_size
 
 if __name__=="__main__":
     for i,sample_size in enumerate(sample_sizes):
