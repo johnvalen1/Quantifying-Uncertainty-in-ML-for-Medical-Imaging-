@@ -38,7 +38,7 @@ if __name__=="__main__":
         for j,proportion in enumerate(proportions):
             training_sample_txt = training_directory + "training_sample_sizeID_%d_proportionID_%d.txt" % (i+1,j+1)
             sampled_training_images = d.select_training_images(n=sample_size, p=proportion)
-            corresponding_test_images = d.select_test_images(sampled_training_images)
+            corresponding_test_images = d.select_test_images(sampled_training_images, p=proportion)
             open(training_sample_txt, 'a').close()    #create a text file
             with open(training_sample_txt, 'w') as file:
                 file.write(str(sampled_training_images))
