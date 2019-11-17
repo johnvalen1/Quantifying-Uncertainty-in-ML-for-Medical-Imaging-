@@ -3,9 +3,13 @@ Binary breast cancer study
 
 CNN_model.py : the CNN is created and set up.
 
-data_prep.py : the function process_selected_images(n,p) takes in n = size of sample (for example 10,000 images) and p = proportion of cancer images (for example if p = 0.05, then the selected sample has 0.05* 10,000 = 500 images of cancer and 9,500 images of healthy tissue). It returns x, y = the images, their labels (of which p% are 1's). This function also implicitly resizes the inputs (images) to 50x50x3 and normalizes the pixel values (min-max normalization) as this is beneficial when training neural nets.
+data_prep.py : 
+Defines the test set, and puts it aside.
+Then it selects the training set as a function of n (size of training set) and p (proportion of cancer images to preserve in the training set). It also prepares the training and test data for the model.
 
-save_samples.py : this script will create the samples of both training images (that the classifier will train on, for choices of sample size and imbalance) and the accompanying test set (by default balanced, and of a size appropriate to a 90-10 train test split).
+save_samples.py :
+Creates the test set as a .txt file to be held-out and accessed later.
+There is a file called "training sets" within which there are n by k files. n = how many sample sizes (taken as 4), k = how many proportions p (also taken as 4). n by k is how many possible combinations are possible (so 16 combinations). Each of these 16 files defines a possible sample size/imbalance setup on which we train, and each possible setup contains m samples (m = 20 here), so that the training data is different each time we train (like shuffling it).
 
 visualize.py just reads in a random image from the directory and lets you view it.
 
