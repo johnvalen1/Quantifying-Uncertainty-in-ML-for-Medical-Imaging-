@@ -23,8 +23,8 @@ Relevant for training:
 '''
 NUMBER_OF_SAMPLES_PER_CASE = 20
 
-sample_sizes = [10000, 20000, 50000, 100000] #linearly incrasing so we can LINEARLY examine marginal effects
-proportions = [0.01, 0.05, 0.10, 0.25] #approximately linear
+sample_sizes = [10000, 20000, 50000, 100000] # should this be linearly increasing so we can LINEARLY examine marginal effects??
+proportions = [0.01, 0.05, 0.10, 0.25] #also should it be approximately linear??
 
 '''
 How many different cases are there? There are k sample sizes, and l proportions, so k*l combinations
