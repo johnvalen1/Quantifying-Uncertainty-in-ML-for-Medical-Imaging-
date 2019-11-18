@@ -9,14 +9,7 @@ test_directory= "C:/Users/John/Desktop/Research Project/Binary Project/Samples/T
 
 TEST_SET_SIZE = 20000
 
-'''
-To save the test set to the text file:
-'''
-sampled_test_images = d.get_test_set(TEST_SET_SIZE)
-test_set_file  = test_directory + "test_set.txt"
-open(test_set_file, 'a').close()
-with open(test_set_file, 'w') as file:
-    file.write(str(sampled_test_images))
+
 
 '''
 Relevant for training:
@@ -38,6 +31,15 @@ is a .txt file containing a list of strings which are the selected images for tr
 '''
 
 if __name__=="__main__":
+    '''
+    To save the test set to the text file:
+    '''
+    sampled_test_images = d.get_test_set(TEST_SET_SIZE)
+    test_set_file  = test_directory + "test_set.txt"
+    open(test_set_file, 'a').close()
+    with open(test_set_file, 'w') as file:
+        file.write(str(sampled_test_images))
+    
     for i,sample_size in enumerate(sample_sizes):
         for j,proportion in enumerate(proportions):
             file = training_directory + "case_n_%d_p_%.2f/" % (sample_size, proportion)
