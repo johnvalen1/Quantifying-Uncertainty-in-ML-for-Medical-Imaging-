@@ -1,0 +1,8 @@
+**/__pycache__/
+**/wandb/
+**/env/
+
+*.pth
+
+*.png
+*.jpeg

@@ -1,0 +1,1 @@
+sample_size, proportion, dataset, Valid_Loss, Valid_Accuracy, Valid_Precision, Valid_Recall, Valid_F1, Valid_ConfMatrix, Test_Loss, Test_Accuracy, Test_Precision, Test_Recall, Test_F1, Test_ConfMatrix
