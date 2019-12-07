@@ -14,4 +14,4 @@ There is a file called "training sets" within which there are n by k files. n = 
 visualize.py just reads in a random image from the directory and lets you view it.
 
 DOWNLOAD DATA
-https://www.kaggle.com/paultimothymooney/breast-histopathology-images
+https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
